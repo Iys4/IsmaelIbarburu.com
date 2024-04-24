@@ -15,9 +15,9 @@
            <a href=""> <img src="img/1x/Artboard 1.png" alt="Logotipo"> </a>
         </div>
         <nav>
-            <a href="">Inicio</a>
+            <a href="" id="active">Inicio</a>
             <a href="">Imagenes</a>
-            <a href="">Contacto</a>
+            <a href="#formulario">Contacto</a>
         </nav>
     </div>
     <div class="imagen_header">
@@ -31,7 +31,7 @@
         <h2><i>IsmaelIbarburu.com</i> es el sitio web donde vas a poder ver todos los trabajos creados por Ismael Ibarburu.</h2>
         <h2>Ahora mismo el sitio esta en desarrollo.</h2>
     </section>
-    <section>
+    <section id="formulario">
         <h1>Contactame</h1>
         <br>
         <form method="post" action="action_page.php" id="form_contacto">
@@ -62,44 +62,6 @@
                        autocomplete="off" 
                        tabindex="-1">
             </label>
-
-            <script>
-                const constraints = {
-                    name: {
-                        presence: { allowEmpty: false }
-                    },
-                    email: {
-                        presence: { allowEmpty: false },
-                        email: true
-                    },
-                    message: {
-                        presence: { allowEmpty: false }
-                    }
-                };
-             
-                const form = document.getElementById('contact-form');
-             
-                form.addEventListener('submit', function (event) {
-                  const formValues = {
-                      name: form.elements.name.value,
-                      email: form.elements.email.value,
-                      message: form.elements.message.value
-                  };
-             
-                  const errors = validate(formValues, constraints);
-             
-                  if (errors) {
-                    event.preventDefault();
-                    const errorMessage = Object
-                        .values(errors)
-                        .map(function (fieldValues) { return fieldValues.join(', ')})
-                        .join("\n");
-             
-                    alert(errorMessage);
-                  }
-                }, false);
-             </script>
-        
           </form>
     </section>
 </main>
