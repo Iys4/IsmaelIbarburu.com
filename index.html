@@ -27,6 +27,78 @@
 <main>
     <section class="Intro_section">
         <h1>Encontraste mi sitio!</h1>
+        <h2><i>IsmaelIbarburu.com</i> es el sitio web donde vas a poder ver todos los trabajos creados por Ismael Ibarburu.</h2>
+        <h2>Ahora mismo el sitio esta en desarrollo.</h2>
+    </section>
+    <section>
+        <h1>Contactame</h1>
+        <form method="post" action="action_page.php" id="form_contacto">
+
+            <label for="name">Primer Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="razon">Razon de contacto</label>
+            <select id="razon" name="razon">
+              <option value="DG">Diseño Grafico</option>
+              <option value="DW">Diseño Web</option>
+              <option value="FT">Fotografia</option>
+            </select>
+        
+            <label for="subject">Su mensaje</label>
+            <textarea id="subject" name="subject" placeholder="Su mensaje aqui" style="height:200px" required></textarea>
+        
+            <input type="submit" value="Submit">
+            <!-- Invisible -->
+            
+            <label for="nickname" aria-hidden="true" class="user-cannot-see"> Nickname
+                <input type="text" 
+                       name="nickname" 
+                       id="nickname" 
+                       class="user-cannot-see" 
+                       autocomplete="off" 
+                       tabindex="-1">
+            </label>
+
+            <script>
+                const constraints = {
+                    name: {
+                        presence: { allowEmpty: false }
+                    },
+                    email: {
+                        presence: { allowEmpty: false },
+                        email: true
+                    },
+                    message: {
+                        presence: { allowEmpty: false }
+                    }
+                };
+             
+                const form = document.getElementById('contact-form');
+             
+                form.addEventListener('submit', function (event) {
+                  const formValues = {
+                      name: form.elements.name.value,
+                      email: form.elements.email.value,
+                      message: form.elements.message.value
+                  };
+             
+                  const errors = validate(formValues, constraints);
+             
+                  if (errors) {
+                    event.preventDefault();
+                    const errorMessage = Object
+                        .values(errors)
+                        .map(function (fieldValues) { return fieldValues.join(', ')})
+                        .join("\n");
+             
+                    alert(errorMessage);
+                  }
+                }, false);
+             </script>
+        
+          </form>
     </section>
 </main>
 </body>
