@@ -32,11 +32,16 @@ header nav {
 }
 nav a {
     font-family: "Montserrat", system-ui;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 2vw;
+    padding: 20px;
+    transition: 1s;
+}
+nav a:hover {
+    color: #a50000;
 }
 @media only screen and (max-width: 1080px) { nav a {
-    font-size: 20px;
+    font-size: 4vw;
+    padding: 10px;
 } }
 
 header img {
@@ -44,23 +49,19 @@ header img {
 }
 .imagen_header h1 {
     font-family: "Rambla", system-ui;
-    font-size: 150px;
+    font-size: 10vw;
     color: brown;
     position: absolute;
     margin-top: 15%;
     max-width: fit-content;
-    margin-left: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
     transition: 2s;
+    filter: drop-shadow(0.5vw 0.5vw 2px #000000);
+    border-radius: 10%;
+    padding: 0px 30px;
 }
-@media only screen and (max-width: 1200px) { .imagen_header h1 {
-font-size: 60px;
-margin-top: 12%;
-background-color: rgba(0, 0, 0, 0.322);
-border-radius: 10px;
-margin-left: 15%;
-} }
 .imagen_header h1:hover {
-    margin-left: 15%;
     color: rgb(173, 5, 5);
     background-color: black;
 }
@@ -131,7 +132,7 @@ input[type=text], select, textarea {
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: #ff2222;
+    background-color: #c20000;
     color: rgb(20, 20, 20);
     padding: 12px 20px;
     border: none;
@@ -141,7 +142,7 @@ input[type=text], select, textarea {
   
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #ff7171;
   }
   
   /* Add a background color and some padding around the form */
@@ -154,4 +155,13 @@ input[type=text], select, textarea {
 
   .user-cannot-see {
     display:none
+}
+footer {
+    background-color: #000000;
+}
+footer h4 {
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #000000;
+    margin-top: 20px;
 }
