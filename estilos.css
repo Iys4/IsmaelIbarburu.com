@@ -35,6 +35,10 @@ nav a {
     font-size: 30px;
     padding: 10px;
 }
+@media only screen and (max-width: 1080px) { nav a {
+    font-size: 20px;
+} }
+
 header img {
     width: 100%;
 }
@@ -49,7 +53,7 @@ header img {
     transition: 2s;
 }
 @media only screen and (max-width: 1200px) { .imagen_header h1 {
-font-size: 70px;
+font-size: 60px;
 margin-top: 12%;
 background-color: rgba(0, 0, 0, 0.322);
 border-radius: 10px;
