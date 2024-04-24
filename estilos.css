@@ -18,9 +18,9 @@
     background-color: black;
 }
 .headerdiv img {
-    height: 200px;
-    width: 200px;
+    width: 80%;
     transition: 2s;
+    max-width: 200px;
 }
 
 header nav {
@@ -28,7 +28,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 5%;
+    margin-right: 5%;
 }
 nav a {
     font-family: "Montserrat", system-ui;
