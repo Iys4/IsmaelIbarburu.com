@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Jacquard+24&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *
-{font-family: 'Heebo', sans-serif;
+{font-family: 'Rambla', sans-serif;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -78,9 +78,17 @@ header img {
 main {
     background-color: rgb(255, 255, 255);
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+main section h2 {
+    color: #000000;
+    padding: 20px;
+    font-size: 23px;
+}
+main section h1 {
+    margin-top: 20px;
 }
 @media only screen and (max-width: 1080px) {.Intro_section h1 {
     font-family: "anton", system-ui;
@@ -115,6 +123,7 @@ main {
     font-size: 40px;
     color: #000000;
     text-align: center;
+    text-wrap: wrap;
 }
 section h1 {
     color: rgb(129, 0, 0);
@@ -179,11 +188,13 @@ input[type=text], select, textarea {
 footer {
     background-color: #000000;
 }
+footer div {
+    padding: 30px 0px;
+    margin-top: 20px;
+}
 footer h4 {
     text-align: center;
-    padding: 30px 0px;
     background-color: #000000;
-    margin-top: 20px;
 }
 /* Nuevo HTML */
 
@@ -194,7 +205,7 @@ footer h4 {
     flex-wrap: wrap;
 }
 .proyectos article {
-    width: 50%;
+    width: 25%;
 }
 .proyectos article img {
     width: 100%;
@@ -202,14 +213,12 @@ footer h4 {
 }
 .proyectos h2 {
     color: #000000;
-    font-size: 5vw;
+    font-size: 30px;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    background-color: #ccc;
 }
-@media only screen and (max-width: 1080px){
-    .proyectos article {
-        width: 100%;
+.proyectos article {
+        width: 50%;
         padding: 2%;
     }
-    
-}
