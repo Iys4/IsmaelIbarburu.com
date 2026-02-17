@@ -102,7 +102,7 @@ lenis.on('scroll', (e) => {
 });
 
 lenis.on('scroll', (e) => {
-  const trigger = 0.1; // 30% scroll
+  const trigger = 0.01; // 30% scroll
 
   if (e.progress > trigger) {
     document.querySelector('.secret').classList.add('visible');
