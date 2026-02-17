@@ -1,0 +1,659 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('Imagenes/Mouse/Cursor2.png') 16 16, auto;
+}
+
+header, footer {
+    width: 100%;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 140rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+a, .proyectoDiv {
+    text-decoration: none;
+    color: #000;
+    cursor: url('Imagenes/Mouse/Cursor.png') 16 16, auto;
+}
+
+h1 {
+color: #000;
+font-size: 5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1;
+}
+
+h2 {
+    color: #000;
+font-size: 3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1;
+}
+
+h4 {
+    color: #000;
+font-family: Arial;
+font-size: 3rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.hero {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+align-self: stretch;
+margin-bottom: 50vh;
+}
+
+.hero h2 {
+    text-align: right;
+}
+
+#heroTitulo {
+display: flex;
+width: 100%;
+padding: 3.125rem 6.25rem;
+justify-content: space-between;
+align-items: center;
+}
+
+#imgHero {
+width: 25%;
+flex-shrink: 0;
+aspect-ratio: 1/1;
+border-radius: 1.0625rem;
+border-top: 15px solid #000;
+border-right: 15px solid #000;
+border-bottom: 4px solid #000;
+border-left: 4px solid #000;
+  background-image: url("Imagenes/Portada/GifCara.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.divTextoHero {
+display: flex;
+max-width: 70%;
+min-width: 50%;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
+gap: 20px;
+flex-shrink: 0;
+}
+
+.divTextoHero a {
+    border-radius: 5.1875rem;
+    background: #000;
+    padding: 1rem;
+    color: white;
+}
+
+.divTextoHero div h1, .divTextoHero div h2 {
+    text-align: right;
+}
+
+#heroCorriendo {
+display: flex;
+width: 100%;
+height: 20vh;
+padding-top: 6.25rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+  background-image: url("Imagenes/Portada/Corriendo.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.seccionesPortada {
+display: flex;
+padding: 3.125rem;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+align-self: stretch;
+}
+
+.seccionesPortada h3 {
+color: #000;
+text-align: center;
+font-family: Arial;
+font-size: 3rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+}
+
+.linksPortada {
+display: flex;
+padding: 0.625rem 0;
+align-items: flex-start;
+gap: 5vw;
+align-self: stretch;
+}
+
+.linksPortada a{
+    background-color: white;
+}
+
+.itemPortada {
+display: flex;
+padding: 10px;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+flex: 1 0 0;
+align-self: stretch;
+border-top: 15px solid #000;
+border-right: 15px solid #000;
+border-bottom: 4px solid #000;
+border-left: 4px solid #000;
+}
+
+.itemPortada img {
+    width: 70%;
+}
+
+.itemPortada h4 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+header {
+display: flex;
+width: 100%;
+height: 7.1875rem;
+padding: 0 6.25rem;
+justify-content: space-between;
+align-items: center;
+}
+
+.itemsHeader {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+gap: 1vw;
+font-size: 2rem;
+font-weight: 700;
+}
+
+footer {
+    background: #000;
+    color: white;
+   display: flex;
+height: 20vh;
+padding: 0 3.125rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+align-self: stretch; 
+display: flex;
+flex-direction: column;
+}
+
+.itemsTitYSub {
+display: flex;
+padding: 0 5vw 2vh 5vw ;
+flex-direction: column;
+gap: 0.625rem;
+align-self: stretch;
+}
+
+.infoProyecto {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.someElement {
+    transition: clip-path 0.4s ease;
+    clip-path: circle(var(--reveal-radius));
+}
+
+body {
+    /* Set white background as the default (hidden) state */
+    background-color: #ffffff;
+    /* Remove the direct background image */
+    background-image: none;
+    /* Set up CSS custom properties for cursor position */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --reveal-radius: 100px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Create an overlay that shows the background image only in a circle */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Use the original background image */
+    background-image: url(PsFondos.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Create the circular reveal effect using mask */
+    -webkit-mask-image: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        black 0%,
+        black var(--reveal-radius),
+        transparent var(--reveal-radius),
+        transparent 100%
+    );
+    mask-image: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        black 0%,
+        black var(--reveal-radius),
+        transparent var(--reveal-radius),
+        transparent 100%
+    );
+    /* Ensure the mask covers the entire element */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    /* Pointer events none so clicks pass through to underlying elements */
+    pointer-events: none;
+    z-index: -1;
+}
+
+.contenedorProyectos {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+align-content: center;
+gap: 1.25rem;
+align-self: stretch;
+flex-wrap: wrap;
+}
+
+.proyectoDiv {
+display: flex;
+height: 40vh;
+min-width: 45%;
+max-width: 50vw;
+padding: 1.25rem;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 1vw;
+border-top: 10px solid #000;
+border-right: 10px solid #000;
+border-bottom: 2px solid #000;
+border-left: 2px solid #000;
+background: url(Imagenes/PortadasProyectos/pBMC.png) lightgray 50% / cover no-repeat;
+cursor: pointer;
+}
+
+.proyectoDiv h3 {
+    display: none;
+}
+
+.proyectoDiv2 {
+    width: 40vh;
+    min-width: 25%;
+}
+
+
+#proyectosIndex {
+    margin-bottom: 20vh;
+}
+
+
+.proyectoDiv div h5 {
+    padding: 1vh 1vw;
+    border-radius: 0.25rem;
+border-top: 3px solid #000;
+border-right: 3px solid #000;
+border-bottom: 1px solid #000;
+border-left: 1px solid #000;
+background: #FFF;
+}
+
+.proyectoDiv div {
+display: flex;
+width: 100%;
+height: 3rem;
+justify-content: left;
+align-items: center;
+gap: 1vw;
+}
+
+#mostradorDeItems {
+display: flex;
+padding: 6.25rem 3.125rem;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+align-self: stretch;
+}
+
+#mostradorDeItems img {
+    width: 100%;
+    align-self: stretch;
+}
+
+#mostradorDeItems div {
+    width: 100%;
+}
+iframe {
+    width: 100%;
+}
+
+.grillaPosts {
+display: inline-grid;
+row-gap: 5px;
+column-gap: 5px;
+align-self: stretch;
+grid-template-rows: repeat(3,fit-content(100%));
+grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+.grillaPosts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grillaPosts .cuadradoGrilla{
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+.grillaPosts .rectGrilla{
+    width: auto;
+    grid-row: span 2;
+}
+
+.grillaPosts .cuadradoApaisar {
+    width: auto;
+    grid-column: span 3;
+}
+
+.itemsTitYSub h1 {
+    font-size: 3rem;
+}
+
+.itemsTitYSub h2 {
+    font-size: 1.5rem;
+}
+
+.itemsTitYSub>:nth-child(1) {
+    padding: 5vh 0 5vh 0;
+}
+
+/* Herramientas display */
+.mostradorDeHerramientas {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mostradorDeHerramientas img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    main {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    header, footer {
+        padding: 0.5rem;
+    }
+}
+
+/* ===== ANIMATIONS AND TRANSITIONS ===== */
+
+/* Logo hover effect */
+header a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header a img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Header links hover effect */
+.itemsHeader a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.itemsHeader a:hover {
+    color: #666;
+    transform: translateY(-2px);
+}
+
+/* Hero image hover animation */
+#imgHero {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#imgHero:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* "Encontra tu idea" button/link hover effect */
+.divTextoHero a {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divTextoHero a:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio category items (itemPortada) hover effects */
+.itemPortada {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.itemPortada:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: #666;
+}
+
+.itemPortada img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.itemPortada:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.itemPortada h4 {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.itemPortada:hover h4 {
+    color: #666;
+    transform: translateY(5px);
+}
+
+/* Project cards (proyectoDiv) hover effects */
+.proyectoDiv {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.proyectoDiv:hover {
+    transform: scale(1.03);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25);
+    border-color: #666;
+}
+
+.proyectoDiv h3 {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* General link hover transitions */
+a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Grid images hover effect */
+.grillaPosts img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Footer links hover */
+footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #ccc;
+    transform: translateY(-2px);
+}
+
+/* Title animations */
+.itemsTitYSub h1 {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.itemsTitYSub h2 {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Subtle fade-in animation for sections */
+.seccionesPortada {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero section animation */
+.hero {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Consecutivo animations for project items */
+.contenedorProyectos {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Button press effect */
+.divTextoHero a:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Item portadas button press */
+.itemPortada:active {
+    transform: translateY(-5px) scale(1);
+}
+
+
+.mostradorDeHerramientasPa {
+    margin: 30px 0;
+    border-radius: 0.2rem;
+border-top: 12px solid #000;
+border-right: 12px solid #000;
+border-bottom: 4px solid #000;
+border-left: 4px solid #000;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.infoProyectoY3d {
+    display: flex;
+    justify-content: space-between;
+}
+
+.a3dproyecto img{
+        border-radius: 0.2rem;
+border-top: 12px solid #000;
+border-right: 12px solid #000;
+border-bottom: 4px solid #000;
+border-left: 4px solid #000;
+max-width: 400px;
+width: 30vw;
+}
+
+
+main {
+  filter: blur(var(--blur, 0px));
+  transition: filter 0.2s ease;
+}
+
+
+header {
+  transition: transform 0.4s ease;
+}
+
+body.scroll-down header {
+  transform: translateY(-100%);
+}
+
+.secret {
+  opacity: 0;
+  transform: translateY(40px);
+  transform: translateX(20px);
+  transition: 0.6s ease;
+}
+
+.secret.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-text span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  transition: all 0.6s ease;
+}
