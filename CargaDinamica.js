@@ -45,19 +45,19 @@ function cargarProyectos() {
     proyectosFiltrados.forEach(proyecto => {
         const proyectoDiv = document.createElement('div');
         proyectoDiv.className = 'proyectoDiv';
-        proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
+        proyectoDiv.style.background = `url('${proyecto.datos}/PortadaIndex/PortadaBit.png') lightgray 50% / cover no-repeat`;
 
         proyectoDiv.innerHTML = `
             <h3>${proyecto.titulo}</h3>
             <div>
-                ${proyecto.categorias.map(cat => `<h5>${cat}</h5>`).join('')}
+                <h5>${proyecto.titulo}</h5>
             </div>
         `;
         proyectoDiv.addEventListener("mouseleave", () => {
-            proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
+            proyectoDiv.style.background = `url('${proyecto.datos}/PortadaIndex/PortadaBit.png') lightgray 50% / cover no-repeat`;
         });
         proyectoDiv.addEventListener("mouseover", () => {
-        proyectoDiv.style.background = `url('${proyecto.datos}/Portada2/Portada2.png') lightgray 50% / cover no-repeat`;
+        proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
 });
         proyectoDiv.addEventListener('click', () => {
             window.location.href = `proyecto.html?id=${proyecto.titulo}`;

@@ -1,30 +1,28 @@
 const proyectosIndex = document.querySelector("#proyectosIndex");
-
+let paralaje = -0.1;
 function cargarProyectosIndex() {
     if (!proyectosIndex) return;
-    
     proyectosIndex.innerHTML = ''; // Clear existing content
-    
     listaProyectos.forEach(proyecto => {
-        let paralaje = (Math.random() * 0.05).toFixed(3);
-        let offset = (Math.random() * 40 -20).toFixed(3);
+        let num =parseFloat((Math.random() * 0.05).toFixed(3));
+        paralaje = paralaje + num;
         const proyectoDiv = document.createElement('div');
         proyectoDiv.className = 'proyectoDiv parallax proyectoDiv2';
         proyectoDiv.dataset.speed = paralaje;
-        proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
+        proyectoDiv.style.background = `url('${proyecto.datos}/PortadaIndex/PortadaBit.png') lightgray 50% / cover no-repeat`;
         proyectoDiv.innerHTML = `
-            <h3>${proyecto.titulo}</h3>
             <div>
-                ${proyecto.categorias.map(cat => `<h5>${cat}</h5>`).join('')}
+                <h5>${proyecto.titulo}</h5>
             </div>
+            <h3>${proyecto.titulo}</h3>
         `;
         
         proyectoDiv.addEventListener("mouseleave", () => {
-            proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
+            proyectoDiv.style.background = `url('${proyecto.datos}/PortadaIndex/PortadaBit.png') lightgray 50% / cover no-repeat`;
         });
         
         proyectoDiv.addEventListener("mouseover", () => {
-            proyectoDiv.style.background = `url('${proyecto.datos}/Portada2/Portada2.png') lightgray 50% / cover no-repeat`;
+            proyectoDiv.style.background = `url('${proyecto.datos}/Portada.png') lightgray 50% / cover no-repeat`;
         });
         
         proyectoDiv.addEventListener('click', () => {

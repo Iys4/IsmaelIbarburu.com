@@ -10,9 +10,11 @@ const imagen3dproyecto = document.querySelector("#imagen3dproyecto");
 
 let randomBit = Math.floor(Math.random() * 2);
 if (randomBit == 0) {
-    imagen3dproyecto.innerHTML = `<img src=Imagenes/3ds/Cubvo.gif></img>`
+    imagen3dproyecto.innerHTML = `<img src=Imagenes/3ds/Cubvo.gif></img>
+    <a href="#mostradorDeItems" class="linkEstilos parallax" data-speed="-0.9">Ver Proyecto ></a>`
 } else {
-    imagen3dproyecto.innerHTML = `<img src=Imagenes/3ds/Esfera_1.gif></img>`
+    imagen3dproyecto.innerHTML = `<img src=Imagenes/3ds/Esfera_1.gif></img>
+    <a href="#mostradorDeItems" class="linkEstilos parallax" data-speed="-0.9">Ver Proyecto ></a>`
 }
 
 let proyectoDisplay = {};

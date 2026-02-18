@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const a = document.createElement('a');
             a.href = ('seccionEvent.html?id=' + linkText);
             a.id = (linkText + "HeaderLink");
-            a.textContent = linkText;
+            a.classList.add('linkEstilos');
+            a.textContent = linkText + " >";
             itemsHeader.appendChild(a);
         });
         header.appendChild(linkIntro);
@@ -121,3 +122,10 @@ lenis.on('scroll', (e) => {
 requestAnimationFrame(raf);
 
 
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  e.preventDefault();
+  lenis.scrollTo(link.getAttribute('href'));
+});
