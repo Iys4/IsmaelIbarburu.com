@@ -129,3 +129,14 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   lenis.scrollTo(link.getAttribute('href'));
 });
+
+const el = document.querySelector('.interactive');
+
+document.addEventListener('mousemove', (e) => {
+  const { innerWidth, innerHeight } = window;
+
+  const x = (e.clientX / innerWidth - 0.5) * 100; 
+  const y = (e.clientY / innerHeight - 0.5) * 100;
+
+  el.style.transform = `translate(${x}px, ${y}px)`;
+});

@@ -1,4 +1,5 @@
 const proyectosIndex = document.querySelector("#proyectosIndex");
+
 let paralaje = -0.1;
 function cargarProyectosIndex() {
     if (!proyectosIndex) return;

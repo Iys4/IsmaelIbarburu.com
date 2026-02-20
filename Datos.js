@@ -1,6 +1,7 @@
 const listaProyectos = [
   {
     titulo: "Butter My Country",
+    numero: 0,
     categorias: ["Web"],
     descripcion: "App de visualización de datos interactivos",
     descripcion2: "Butter My Country es una web que nos permite visualizar de forma lúdica diferentes estadisticas sobre produccion, consumo y economia basandonos en la manteca como unidad base. Ademas del visualizador creamos una base de datos dinamica que permite sumar puntos para un leaderboard competitivo que define que usuario tiene el mayor conocimiento sobre manteca",
@@ -11,6 +12,7 @@ const listaProyectos = [
   },
   {
     titulo: "Clinica ATAM",
+    numero: 1,
     categorias: ["Branding", "Audiovisual"],
     descripcion: "Proyecto de identidad visual y contenido multimedia",
     descripcion2: "Clinica ATAM es un proyecto integral de identidad visual y contenido multimedia que incluye diseño de logo, papelería, redes sociales y videos promocionales para una clinica de bienestar y para un evento adjunto llamado Encuentro de Podologos.",
@@ -23,6 +25,7 @@ const listaProyectos = [
   },
   {
     titulo: "Glitchen",
+    numero: 2,
     categorias: ["Audiovisual", "Branding"],
     descripcion: "Experiencia culinaria con estetica experimental",
     descripcion2: "Glitchen es una experiencia culinaria experimental centrada en la cocina atomica, creamos una identidad de marca única y memorable basada en colores llamativos y una propuesta nueva para el pais.",
@@ -33,6 +36,7 @@ const listaProyectos = [
   },
   {
     titulo: "Hornero Estudio",
+    numero: 3,
     categorias: ["Branding"],
     descripcion: "Diseño de marca para estudio de diseño",
     descripcion2: "Hornero Estudio es un proyecto de diseño de marca completo para un estudio de diseño, incluyendo logo, identidad visual, papelería y guidelines de marca. El objetivo es mostrar una marca de diseño cercana al cliente, personalizada y que acompañe al cliente en todas las etapas",
@@ -43,6 +47,7 @@ const listaProyectos = [
   },
   {
     titulo: "Lento",
+    numero: 4,
     categorias: ["Web", "Branding"],
     descripcion: "Proyecto de rediseño de marca para revista",
     descripcion2: "Lento es un proyecto de rediseño de marca para una revista, basado principalmente en un intento de modernizar la visualizacion web de Lento para que se equiparara en estilo a la experiencia fisica de la revista",
@@ -53,6 +58,7 @@ const listaProyectos = [
   },
   {
     titulo: "Que Hay",
+    numero: 5,
     categorias: ["Web"],
     descripcion: "Interfaz de usuario para aplicación de eventos",
     descripcion2: "Que Hay es una interfaz de usuario para una aplicación de eventos que permite a los usuarios descubrir, buscar y guardar eventos culturales, musicales y sociales en su ciudad. Tiene como objetivo crear una app comunitaria donde todos los tipos de eventos puedan publicarse sin exceso de curaduria ni costos adicionales",
@@ -63,6 +69,7 @@ const listaProyectos = [
   },
   {
     titulo: "ReVestir",
+    numero: 6,
     categorias: ["Branding", "Web"],
     descripcion: "Diseño de marca y app para app de reciclaje",
     descripcion2: "ReVestir es un proyecto integral de diseño de marca y aplicación móvil para una app de reciclaje que conecta usuarios con puntos de reciclaje, crea campañas en sus ciudades y recompensa prácticas sustentables.",
@@ -73,6 +80,7 @@ const listaProyectos = [
   },
   {
     titulo: "YAXMedia",
+    numero: 7,
     categorias: ["Audiovisual"],
     descripcion: "Producción de contenido multimedia para YAX",
     descripcion2: "YAXMedia es un proyecto de producción de contenido multimedia que incluye videos promocionales, contenido para redes sociales y material audiovisual corporativo para YAX. YAX es una empresa de marketing digital enfocada en desarrollar negocios inmobiliarios en redes sociales.",
@@ -85,6 +93,7 @@ const listaProyectos = [
   },
   {
     titulo: "3D",
+    numero: 8,
     categorias: ["Audiovisual"],
     descripcion: "Animación 3D y efectos visuales avanzados",
     descripcion2: "3D es un proyecto de animación 3D y efectos visuales avanzados que incluye modelado, texturizado, iluminación y renderizado para crear contenido visual de alta calidad.",
@@ -95,6 +104,7 @@ const listaProyectos = [
   },
   {
     titulo: "Fiestas del Uruguay",
+    numero: 9,
     categorias: ["Branding"],
     descripcion: "Proyecto de branding para fiestas tradicionales del Uruguay",
     descripcion2: "Fiestas del Uruguay es un proyecto de branding para fiestas tradicionales del Uruguay, incluyendo identidad visual, materiales impresos y digitales que celebrate la cultura y tradiciones uruguayas con un enfoque en las fiestas del verano Uruguayo. Se presentan materiales impresos, prototipos de web y posteos para redes sociales",

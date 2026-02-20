@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const idCat = params.get("id");
-
+const linkAbajoProyecto = document.querySelector(".linkAbajoProyecto")
 const tituloPro = document.querySelector ("#tituloPro");
 const descripcionPro = document.querySelector ("#descripcionPro");
 const descripcion2Pro = document.querySelector ("#descripcion2Pro");
@@ -27,7 +27,6 @@ listaProyectos.forEach(proyecto => {
             mostradorDeHerramientasPro.innerHTML += `<img src="${herramienta}"><img>`
         });
         proyectoDisplay = proyecto;
-        console.log(proyectoDisplay);
         cargarInfo();
     }
 });
@@ -41,6 +40,7 @@ if (proyectoDisplay.tipo === "behance"){
 } else if (proyectoDisplay.tipo === "mobile") {
     cargarMobile();
 }
+cargarFin(proyectoDisplay.categorias, proyectoDisplay.numero);
 }
 
 function cargarBehance() {
@@ -97,4 +97,19 @@ function cargarMobile(){
     mostradorDeItems.appendChild(gridElement);
 }
 
+function cargarFin(categoriaProyecto, numero){
+    let proyectoPrev = numero-1;
+    let proyectoProx = numero+1;
+    if (proyectoPrev === -1) {
+        proyectoPrev = 9
+    }
+    if (proyectoProx === 10){
+        proyectoProx = 0;
+    } 
+    linkAbajoProyecto.innerHTML += `<a href=proyecto.html?id=${encodeURIComponent(listaProyectos[proyectoPrev].titulo)} class= "linkEstilos">< Ver ${listaProyectos[proyectoPrev].titulo}</a>`
+    categoriaProyecto.forEach(element => {
+        linkAbajoProyecto.innerHTML += `<a href=seccionEvent.html?id=${element} class= "linkEstilos">Volver a ${element} ></a>`
+    });
+    linkAbajoProyecto.innerHTML += `<a href=proyecto.html?id=${encodeURIComponent(listaProyectos[proyectoProx].titulo)} class= "linkEstilos">Ver ${listaProyectos[proyectoProx].titulo} ></a>`
 
+}
