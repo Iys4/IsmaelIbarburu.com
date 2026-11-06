@@ -104,11 +104,13 @@ lenis.on('scroll', (e) => {
 
 lenis.on('scroll', (e) => {
   const trigger = 0.01; // 30% scroll
+  const secretEl = document.querySelector('.secret');
+  if (!secretEl) return;
 
   if (e.progress > trigger) {
-    document.querySelector('.secret').classList.add('visible');
+    secretEl.classList.add('visible');
   } else {
-    document.querySelector('.secret').classList.remove('visible');
+    secretEl.classList.remove('visible');
   }
 });
 
@@ -132,11 +134,13 @@ document.addEventListener('click', (e) => {
 
 const el = document.querySelector('.interactive');
 
-document.addEventListener('mousemove', (e) => {
-  const { innerWidth, innerHeight } = window;
+if (el) {
+  document.addEventListener('mousemove', (e) => {
+    const { innerWidth, innerHeight } = window;
 
-  const x = (e.clientX / innerWidth - 0.5) * 100; 
-  const y = (e.clientY / innerHeight - 0.5) * 100;
+    const x = (e.clientX / innerWidth - 0.5) * 100; 
+    const y = (e.clientY / innerHeight - 0.5) * 100;
 
-  el.style.transform = `translate(${x}px, ${y}px)`;
-});
+    el.style.transform = `translate(${x}px, ${y}px)`;
+  });
+}
