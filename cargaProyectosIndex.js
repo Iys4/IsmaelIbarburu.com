@@ -62,4 +62,22 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function cargarMenuJuegos() {
+    const listaMenu = document.querySelector("#listaMenuJuegos");
+    if (!listaMenu || typeof listaJuegos === "undefined" || !listaJuegos.length) return;
+
+    listaMenu.innerHTML = "";
+    listaJuegos.forEach((juego) => {
+        const link = document.createElement("a");
+        link.href = juego.url;
+        link.className = "linkEstilos itemMenuJuego";
+        link.textContent = juego.titulo + " >";
+        listaMenu.appendChild(link);
+    });
+}
+
+cargarMenuJuegos();
+
+
+
 

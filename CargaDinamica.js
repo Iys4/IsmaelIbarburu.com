@@ -12,6 +12,10 @@ const seccionesEventos = [{
 {
     titulo: 'Web',
     descripcion: "Webs y aplicaciones atractivas y funcionales. Con el usuario como prioridad."
+    },
+{
+    titulo: 'Juegos',
+    descripcion: "Juegos interactivos y aplicaciones educativas desarrolladas para web."
     }];
 const params = new URLSearchParams(window.location.search);
 const idCat = params.get("id");
@@ -24,22 +28,31 @@ cargarTitulos();
 
 function cargarTitulos() {
     let numeroArray = 0;
-    if (idCat === seccionesEventos[0].titulo) {
-        numeroArray = 0;
-    } else if (idCat === seccionesEventos[1].titulo) {
-        numeroArray = 1;
-    } else if (idCat === seccionesEventos[2].titulo) {
-        numeroArray = 2;
-    } else if (idCat === seccionesEventos[3].titulo) {
-        numeroArray = 3;
-    } else if (idCat === seccionesEventos[1].titulo) {
-        numeroArray = 3;
+    const foundIndex = seccionesEventos.findIndex(sec => sec.titulo === idCat);
+    if (foundIndex !== -1) {
+        numeroArray = foundIndex;
     }
     tituloCat.innerHTML = `${seccionesEventos[numeroArray].titulo}`
     descripcionCat.innerHTML = `${seccionesEventos[numeroArray].descripcion}`
 }
 
 function cargarProyectos() {
+    if (idCat === 'Juegos' && typeof listaJuegos !== 'undefined') {
+        proyectosCat.classList.remove('secret');
+        proyectosCat.innerHTML = '';
+        const menuNav = document.createElement('nav');
+        menuNav.className = 'menuJuegosChico';
+        listaJuegos.forEach(juego => {
+            const link = document.createElement('a');
+            link.href = juego.url;
+            link.className = 'linkEstilos itemMenuJuego';
+            link.textContent = juego.titulo + ' >';
+            menuNav.appendChild(link);
+        });
+        proyectosCat.appendChild(menuNav);
+        return;
+    }
+
     const proyectosFiltrados = listaProyectos.filter(proyecto => proyecto.categorias.includes(idCat));
     proyectosCat.innerHTML = ''; // Clear existing content
     proyectosFiltrados.forEach(proyecto => {

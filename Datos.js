@@ -113,4 +113,13 @@ const listaProyectos = [
     datos: "Imagenes/Imagenes/Fiestas del Uruguay",
     imagenes: ["Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 10.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 11.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 12.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 13.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 16.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 17.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 18.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 19.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 20.png", "Imagenes/Imagenes/Fiestas del Uruguay/Slide 16_9 - 21.jpg", "Imagenes/Imagenes/Fiestas del Uruguay/A4 - 10.png", "Imagenes/Imagenes/Fiestas del Uruguay/A4 - 11.png"]
   }
-]
+];
+
+const listaJuegos = [
+  {
+    titulo: "Deteccion de invertebrados marinos",
+    url: "bom/index.html"
+  }
+];
+
+

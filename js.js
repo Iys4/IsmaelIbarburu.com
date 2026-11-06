@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         linkIntro.appendChild(img);
         const itemsHeader = document.createElement('div');
         itemsHeader.className = 'itemsHeader';
-        const links = ['Audiovisual', 'Branding', 'Web'];
+        const links = ['Audiovisual', 'Branding', 'Web', 'Juegos'];
         links.forEach(linkText => {
             const a = document.createElement('a');
             a.href = ('seccionEvent.html?id=' + linkText);
