@@ -119,7 +119,12 @@ const listaJuegos = [
   {
     titulo: "Deteccion de invertebrados marinos",
     url: "bom/index.html"
+  },
+  {
+    titulo: "Calculadora Miramar Misiones",
+    url: "calculadora-miramar/index.html"
   }
 ];
+
 
 
