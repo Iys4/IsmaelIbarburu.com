@@ -3,3 +3,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/assets/aistudio/*"
+  to = "/bom/assets/aistudio/:splat"
+  status = 200
