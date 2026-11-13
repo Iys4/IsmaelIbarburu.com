@@ -123,8 +123,13 @@ const listaJuegos = [
   {
     titulo: "Calculadora Miramar Misiones",
     url: "calculadora-miramar/index.html"
+  },
+  {
+    titulo: "visualizador de segunda division profesional",
+    url: "segunda-auf/index.html"
   }
 ];
+
 
 
 
